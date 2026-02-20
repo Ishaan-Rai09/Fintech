@@ -1,0 +1,74 @@
+---
+title: "Portfolio Optimization Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+.libPaths(c('libs', .libPaths()))
+library(flexdashboard)
+library(plotly)
+library(ggplot2)
+library(dplyr)
+library(xts)
+library(PortfolioAnalytics)
+library(quadprog)
+library(viridis)
+
+# Load the logic
+source("portfolio_optimization.R")
+```
+
+Row {data-height=650}
+-----------------------------------------------------------------------
+
+### Cumulative Asset Performance (Interactive)
+
+```{r}
+plot_asset_performance(returns_xts)
+```
+
+### Annualized Risk vs Return
+
+```{r}
+plot_risk_return(returns_xts)
+```
+
+Row {data-height=350}
+-----------------------------------------------------------------------
+
+### Optimal Weights (PortfolioAnalytics)
+
+```{r}
+w_opt <- extractWeights(opt_adv)
+w_df <- data.frame(
+  Asset = names(w_opt),
+  Weight = as.numeric(w_opt)
+)
+
+p_w <- ggplot(w_df, aes(x = reorder(Asset, -Weight), y = Weight, fill = Asset)) +
+  geom_bar(stat = "identity") +
+  scale_fill_viridis_d() +
+  theme_minimal() +
+  labs(x = "Asset", y = "Weight")
+
+ggplotly(p_w)
+```
+
+### Portfolio Summary
+
+```{r}
+# Calculate summary metrics
+p_weights <- as.numeric(extractWeights(opt_adv))
+p_return <- sum(p_weights * colMeans(returns_xts)) * 252
+p_risk <- sqrt(t(p_weights) %*% cov(returns_xts) %*% p_weights) * sqrt(252)
+
+knitr::kable(data.frame(
+  Metric = c("Annualized Return", "Annualized Volatility", "Sharpe Ratio (RF=0)"),
+  Value = c(sprintf("%.2f%%", p_return * 100), 
+            sprintf("%.2f%%", p_risk * 100), 
+            round(p_return / p_risk, 2))
+))
+```

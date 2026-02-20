@@ -1,0 +1,257 @@
+BlackLittermanFormula   Computes the Black-Litterman formula for the
+                        moments of the posterior normal.
+CCCgarch.MM             compute comoments for use by lower level
+                        optimization functions when the conditional
+                        covariance matrix is a CCC GARCH model
+EntropyProg             Entropy pooling program for blending views on
+                        scenarios with a prior scenario-probability
+                        distribution
+HHI                     Concentration of weights
+MycovRobMcd             Control settings for custom.covRob.Mcd
+MycovRobTSGS            Control settings for custom.covRob.TSGS
+PortfolioAnalytics-package
+                        Numeric methods for optimization of portfolios
+ac.ranking              Asset Ranking
+add.constraint          General interface for adding and/or updating
+                        optimization constraints.
+add.objective           General interface for adding optimization
+                        objectives, including risk, return, and risk
+                        budget
+add.sub.portfolio       Add sub-portfolio
+applyFUN                Apply a risk or return function to a set of
+                        weights
+backtest.plot           generate plots of the cumulative returns and
+                        drawdown for back-testing
+barplotGroupWeights     barplot of group weights by group or category
+black.litterman         Black Litterman Estimates
+box_constraint          constructor for box_constraint.
+center                  Center
+centroid.buckets        Buckets Centroid
+centroid.complete.mc    Complete Cases Centroid
+centroid.sectors        Multiple Sectors Centroid
+centroid.sign           Positive and Negative View Centroid
+chart.Concentration     Classic risk reward scatter and concentration
+chart.EF.Weights        Chart weights along an efficient frontier
+chart.EfficientFrontier
+                        Chart the efficient frontier and risk-return
+                        scatter
+chart.EfficientFrontierCompare
+                        Overlay the efficient frontiers of different
+                        minRisk portfolio objects on a single plot.
+chart.EfficientFrontierOverlay
+                        Plot multiple efficient frontiers
+chart.GroupWeights      Chart weights by group or category
+chart.RiskBudget        Generic method to chart risk contribution
+chart.RiskReward        classic risk reward scatter
+chart.Weights           boxplot of the weights of the optimal
+                        portfolios
+check_constraints       check if a set of weights satisfies the
+                        constraints
+cokurtosisMF            Cokurtosis Matrix Estimate
+cokurtosisSF            Cokurtosis Matrix Estimate
+combine.optimizations   Combine objects created by optimize.portfolio
+combine.portfolios      Combine a list of portfolio objects
+constrained_objective   calculate a numeric return value for a
+                        portfolio based on a set of constraints and
+                        objectives
+constraint_ROI          constructor for class constraint_ROI
+constraint_v1           constructors for class constraint
+coskewnessMF            Coskewness Matrix Estimate
+coskewnessSF            Coskewness Matrix Estimate
+covarianceMF            Covariance Matrix Estimate
+covarianceSF            Covariance Matrix Estimate
+create.EfficientFrontier
+                        create an efficient frontier
+custom.covRob.MM        Compute returns mean vector and covariance
+                        matrix with custom.covRob.MM
+custom.covRob.Mcd       Compute returns mean vector and covariance
+                        matrix with custom.covRob.Mcd
+custom.covRob.Rocke     Compute returns mean vector and covariance
+                        matrix with custom.covRob.Rocke
+custom.covRob.TSGS      Compute returns mean vector and covariance
+                        matrix with custom.covRob.TSGS
+diversification         Function to compute diversification as a
+                        constraint
+diversification_constraint
+                        constructor for diversification_constraint
+equal.weight            Create an equal weight portfolio
+etl_milp_opt            Minimum ETL MILP Optimization
+etl_opt                 Minimum ETL LP Optimization
+extractCokurtosis       Cokurtosis Estimate
+extractCoskewness       Coskewness Estimate
+extractCovariance       Covariance Estimate
+extractEfficientFrontier
+                        Extract the efficient frontier data points
+extractGroups           Extract the group and/or category weights
+extractObjectiveMeasures
+                        Extract the objective measures
+extractStats            extract some stats and weights from a portfolio
+                        run via 'optimize.portfolio'
+extractWeights          Extract weights from a portfolio run via
+                        'optimize.portfolio' or
+                        'optimize.portfolio.rebalancing'
+extract_risk            extract the risk value when knowing the weights
+factor_exposure_constraint
+                        Constructor for factor exposure constraint
+fn_map                  mapping function to transform or penalize
+                        weights that violate constraints
+generatesequence        create a sequence of possible weights for
+                        random or brute force portfolios
+get_constraints         Helper function to get the enabled constraints
+                        out of the portfolio object When the
+                        v1_constraint object is instantiated via
+                        constraint, the arguments min_sum, max_sum,
+                        min, and max are either specified by the user
+                        or default values are assigned. These are
+                        required by other functions such as
+                        'optimize.portfolio' and
+                        'constrained_objective' . This function will
+                        check that these variables are in the portfolio
+                        object in the constraints list. We will default
+                        to 'min_sum=1' and 'max_sum=1' if leverage
+                        constraints are not specified. We will default
+                        to 'min=-Inf' and 'max=Inf' if box constraints
+                        are not specified.  This function is used at
+                        the beginning of optimize.portfolio and other
+                        functions to extract the constraints from the
+                        portfolio object. We Use the same naming as the
+                        v1_constraint object.
+gmv_opt                 GMV/QU QP Optimization
+gmv_opt_leverage        GMV/QU QP Optimization with Turnover Constraint
+gmv_opt_ptc             GMV/QU QP Optimization with Proportional
+                        Transaction Cost Constraint
+gmv_opt_toc             GMV/QU QP Optimization with Turnover Constraint
+group_constraint        constructor for group_constraint
+group_fail              Test if group constraints have been violated
+indexes                 Six Major Economic Indexes
+insert_constraints      Insert a list of constraints into the
+                        constraints slot of a portfolio object
+insert_objectives       Insert a list of objectives into the objectives
+                        slot of a portfolio object
+inverse.volatility.weight
+                        Create an inverse volatility weighted portfolio
+is.constraint           check function for constraints
+is.objective            check class of an objective object
+is.portfolio            check function for portfolio
+leverage_exposure_constraint
+                        constructor for leverage_exposure_constraint
+maxret_milp_opt         Maximum Return MILP Optimization
+maxret_opt              Maximum Return LP Optimization
+meancsm.efficient.frontier
+                        Generate the efficient frontier for a mean-CSM
+                        portfolio
+meanetl.efficient.frontier
+                        Generate the efficient frontier for a mean-etl
+                        portfolio
+meanrisk.efficient.frontier
+                        Generate multiple efficient frontiers for the
+                        same portfolio
+meanvar.efficient.frontier
+                        Generate the efficient frontier for a
+                        mean-variance portfolio
+meucci.moments          Compute moments
+meucci.ranking          Asset Ranking
+minmax_objective        constructor for class tmp_minmax_objective
+mult.portfolio.spec     Multple Layer Portfolio Specification
+name.replace            utility function to replace awkward named from
+                        unlist
+objective               constructor for class 'objective'
+opt.outputMvo           Optimal Portfolio Weights and Performance
+                        Values
+optimize.portfolio      Constrained optimization of portfolios
+optimize.portfolio.parallel
+                        Execute multiple optimize.portfolio calls,
+                        presumably in parallel
+optimize.portfolio.rebalancing
+                        Portfolio Optimization with Rebalancing Periods
+pHist                   Generates histogram
+plot.optimize.portfolio.DEoptim
+                        plot method for objects of class
+                        'optimize.portfolio'
+plotFrontiers           Generate efficient frontiers plot by providing
+                        frontiers.
+portfolio.moments.bl    Portfolio Moments
+portfolio.moments.boudt
+                        Portfolio Moments
+portfolio.spec          constructor for class portfolio
+portfolio_risk_objective
+                        constructor for class portfolio_risk_objective
+pos_limit_fail          function to check for violation of position
+                        limits constraints
+position_limit_constraint
+                        constructor for filter_constraint
+print.constraint        print method for constraint objects
+print.efficient.frontier
+                        Print an efficient frontier object
+print.optimize.portfolio.ROI
+                        Printing output of optimize.portfolio
+print.optimize.portfolio.rebalancing
+                        Printing output of
+                        optimize.portfolio.rebalancing
+print.portfolio         Printing Portfolio Specification Objects
+print.summary.optimize.portfolio
+                        Printing summary output of optimize.portfolio
+print.summary.optimize.portfolio.rebalancing
+                        Printing summary output of
+                        optimize.portfolio.rebalancing
+quadratic_utility_objective
+                        constructor for quadratic utility objective
+random_portfolios       version 2 generate an arbitary number of
+                        constrained random portfolios
+random_portfolios_v1    generate an arbitary number of constrained
+                        random portfolios
+random_walk_portfolios
+                        deprecated random portfolios wrapper until we
+                        write a random trades function
+randomize_portfolio     version 2 generate random permutations of a
+                        portfolio seed meeting your constraints on the
+                        weights of each asset
+randomize_portfolio_v1
+                        Random portfolio sample method
+regime.portfolios       Regime Portfolios
+return_constraint       constructor for return_constraint
+return_objective        constructor for class return_objective
+risk_budget_objective   constructor for class risk_budget_objective
+rp_grid                 Generate random portfolios based on grid search
+                        method
+rp_sample               Generate random portfolios using the sample
+                        method
+rp_simplex              Generate random portfolios using the simplex
+                        method
+rp_transform            Transform a weights vector to satisfy
+                        constraints
+scatterFUN              Apply a risk or return function to asset
+                        returns
+set.portfolio.moments   Portfolio Moments
+set.portfolio.moments_v1
+                        set portfolio moments for use by lower level
+                        optimization functions
+statistical.factor.model
+                        Statistical Factor Model
+summary.efficient.frontier
+                        Summarize an efficient frontier object
+summary.optimize.portfolio
+                        Summarizing output of optimize.portfolio
+summary.optimize.portfolio.rebalancing
+                        summary method for
+                        optimize.portfolio.rebalancing
+summary.portfolio       Summarize Portfolio Specification Objects
+trailingFUN             apply a function over a configurable trailing
+                        period
+transaction_cost_constraint
+                        constructor for transaction_cost_constraint
+turnover                Calculates turnover given two vectors of
+                        weights. This is used as an objective function
+                        and is called when the user adds an objective
+                        of type turnover with 'add.objective'
+turnover_constraint     constructor for turnover_constraint
+turnover_objective      constructor for class turnover_objective
+update.constraint       function for updating constrints, not well
+                        tested, may be broken
+update_constraint_v1tov2
+                        Helper function to update v1_constraint objects
+                        to v2 specification in the portfolio object
+var.portfolio           Calculate portfolio variance
+weight_concentration_objective
+                        Constructor for weight concentration objective
+weight_sum_constraint   constructor for weight_sum_constraint

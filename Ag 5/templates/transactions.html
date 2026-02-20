@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <h2 class="fw-bold text-dark">Transaction History</h2>
+        <p class="text-muted">Review all your incoming and outgoing transfers.</p>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="bg-light">
+                    <tr>
+                        <th class="ps-4 py-3 text-secondary text-uppercase text-xs fw-bolder opacity-7">Date & Time</th>
+                        <th class="py-3 text-secondary text-uppercase text-xs fw-bolder opacity-7">Type</th>
+                        <th class="py-3 text-secondary text-uppercase text-xs fw-bolder opacity-7">Details</th>
+                        <th class="pe-4 py-3 text-end text-secondary text-uppercase text-xs fw-bolder opacity-7">Amount
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for transaction in transactions %}
+                    <tr>
+                        <td class="ps-4">
+                            <div class="d-flex flex-column">
+                                <span class="fw-bold text-dark">{{ transaction.timestamp.strftime('%b %d, %Y') }}</span>
+                                <span class="text-muted small">{{ transaction.timestamp.strftime('%H:%M %p') }}</span>
+                            </div>
+                        </td>
+                        <td>
+                            {% if transaction.sender == session['username'] %}
+                            <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-3">Sent</span>
+                            {% else %}
+                            <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-3">Received</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if transaction.sender == session['username'] %}
+                            <span class="text-muted">To: <span class="fw-bold text-dark">{{ transaction.receiver
+                                    }}</span></span>
+                            {% else %}
+                            <span class="text-muted">From: <span class="fw-bold text-dark">{{ transaction.sender
+                                    }}</span></span>
+                            {% endif %}
+                        </td>
+                        <td class="pe-4 text-end">
+                            <span
+                                class="fw-bold {{ 'text-danger' if transaction.sender == session['username'] else 'text-success' }}">
+                                {{ '-' if transaction.sender == session['username'] else '+' }} ${{
+                                "{:,.2f}".format(transaction.amount) }}
+                            </span>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="4" class="text-center py-5 text-muted">
+                            <i class="fas fa-receipt fa-3x mb-3 opacity-50"></i>
+                            <p>No transactions found yet.</p>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

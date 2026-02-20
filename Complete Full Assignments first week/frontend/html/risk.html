@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Analysis - FinSight AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/feature-pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar-simple">
+        <div class="nav-brand">
+            <a href="/dashboard" class="brand-link">
+                <span class="logo-icon">📊</span>
+                <span class="logo-text">FinSight AI</span>
+            </a>
+        </div>
+        <div class="nav-actions">
+            <a href="/dashboard" class="btn btn-outline">← Back to Dashboard</a>
+            <div class="user-info">
+                <span id="userName">Loading...</span>
+                <a href="#" id="logoutBtn" class="logout-link">Logout</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <header class="feature-header">
+            <div class="feature-icon">⚠️</div>
+            <div class="feature-info">
+                <h1>Risk Analysis</h1>
+                <p>Calculate VaR (Historical, Parametric, Monte Carlo) and assess portfolio risks</p>
+            </div>
+        </header>
+        
+        <div class="feature-content">
+        
+        <div class="analysis-section">
+            <h2>📊 VaR Calculator</h2>
+            <form id="dualStockForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ticker1">Stock 1 Ticker</label>
+                        <input type="text" id="ticker1" value="AAPL" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="weight1">Weight (%)</label>
+                        <input type="number" id="weight1" value="60" min="0" max="100" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ticker2">Stock 2 Ticker</label>
+                        <input type="text" id="ticker2" value="MSFT" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="weight2">Weight (%)</label>
+                        <input type="number" id="weight2" value="40" min="0" max="100" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="portfolioValue">Portfolio Value ($)</label>
+                        <input type="number" id="portfolioValue" value="100000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confidence">Confidence Level</label>
+                        <select id="confidence">
+                            <option value="0.95">95%</option>
+                            <option value="0.99">99%</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Calculate VaR</button>
+            </form>
+            
+            <div id="varResults" class="results"></div>
+        </div>
+        </div>
+    </div>
+    
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/auth-check.js"></script>
+    <script src="/static/js/test-data.js"></script>
+    <script src="/static/js/risk.js"></script>
+</body>
+</html>

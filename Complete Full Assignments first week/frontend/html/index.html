@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinSight AI - Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/dashboard-additions.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar-simple">
+        <div class="nav-brand">
+            <span class="logo-icon">📊</span>
+            <span class="logo-text">FinSight AI</span>
+        </div>
+        <div class="nav-actions">
+            <button class="btn btn-outline" onclick="window.location.reload()">🔄 Refresh</button>
+            <button class="btn btn-primary" onclick="showTestData()">📊 View Test Data</button>
+            <div class="user-info">
+                <span id="userName">Loading...</span>
+                <a href="#" id="logoutBtn" class="logout-link">Logout</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <header class="page-header">
+            <div class="header-content">
+                <div>
+                    <h1>Welcome Back! 👋</h1>
+                    <p id="userGreeting" class="header-subtitle">Loading your financial insights...</p>
+                </div>
+            </div>
+        </header>
+        
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-icon">💼</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="portfolioValue">$0</span>
+                    <span class="stat-label">Portfolio Value</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-info">
+                    <span class="stat-value stat-success" id="portfolioReturn">+0%</span>
+                    <span class="stat-label">Total Return</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⚠️</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="riskLevel">Low</span>
+                    <span class="stat-label">Risk Level</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="predictions">0</span>
+                    <span class="stat-label">Active Predictions</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="features-list">
+            <div class="feature-item" data-feature="portfolio">
+                <div class="feature-content">
+                    <div class="feature-header">
+                        <div class="feature-icon">💼</div>
+                        <div class="feature-info">
+                            <h3>Portfolio Management</h3>
+                            <p>Optimize and manage your investment portfolio with ML algorithms</p>
+                        </div>
+                    </div>
+                    <div class="feature-actions">
+                        <a href="/portfolio" class="btn btn-primary">Open Portfolio</a>
+                        <button class="btn btn-outline" onclick="showTestDataSection('portfolio')">View Sample</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="feature-item" data-feature="risk">
+                <div class="feature-content">
+                    <div class="feature-header">
+                        <div class="feature-icon">⚠️</div>
+                        <div class="feature-info">
+                            <h3>Risk Analysis</h3>
+                            <p>Calculate VaR (Historical, Parametric, Monte Carlo) and assess portfolio risks</p>
+                        </div>
+                    </div>
+                    <div class="feature-actions">
+                        <a href="/risk" class="btn btn-primary">Analyze Risk</a>
+                        <button class="btn btn-outline" onclick="showTestDataSection('risk')">View Sample</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="feature-item" data-feature="predictions">
+                <div class="feature-content">
+                    <div class="feature-header">
+                        <div class="feature-icon">🔮</div>
+                        <div class="feature-info">
+                            <h3>ML Predictions</h3>
+                            <p>Time series forecasting with ARIMA, LSTM, and sentiment analysis</p>
+                        </div>
+                    </div>
+                    <div class="feature-actions">
+                        <a href="/predictions" class="btn btn-primary">Make Predictions</a>
+                        <button class="btn btn-outline" onclick="showTestDataSection('predictions')">View Sample</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="feature-item" data-feature="robo-advisor">
+                <div class="feature-content">
+                    <div class="feature-header">
+                        <div class="feature-icon">🤖</div>
+                        <div class="feature-info">
+                            <h3>Robo Advisor</h3>
+                            <p>Get AI-powered personalized investment advice and portfolio recommendations</p>
+                        </div>
+                    </div>
+                    <div class="feature-actions">
+                        <a href="/robo-advisor" class="btn btn-primary">Start Advisory</a>
+                        <button class="btn btn-outline" onclick="showTestDataSection('robo-advisor')">View Sample</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="feature-item" data-feature="tax">
+                <div class="feature-content">
+                    <div class="feature-header">
+                        <div class="feature-icon">💰</div>
+                        <div class="feature-info">
+                            <h3>Tax Calculator</h3>
+                            <p>Calculate capital gains tax and optimize your tax strategy</p>
+                        </div>
+                    </div>
+                    <div class="feature-actions">
+                        <a href="/tax" class="btn btn-primary">Calculate Tax</a>
+                        <button class="btn btn-outline" onclick="showTestDataSection('tax')">View Sample</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="feature-item" data-feature="transactions">
+                <div class="feature-content">
+                    <div class="feature-header">
+                        <div class="feature-icon">📈</div>
+                        <div class="feature-info">
+                            <h3>Transactions</h3>
+                            <p>Analyze spending patterns and detect fraudulent transactions with ML</p>
+                        </div>
+                    </div>
+                    <div class="feature-actions">
+                        <a href="/transactions" class="btn btn-primary">Analyze</a>
+                        <button class="btn btn-outline" onclick="showTestDataSection('transactions')">View Sample</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="feature-item" data-feature="data">
+                <div class="feature-content">
+                    <div class="feature-header">
+                        <div class="feature-icon">📊</div>
+                        <div class="feature-info">
+                            <h3>Data Management</h3>
+                            <p>Upload and analyze financial data with AI-powered insights</p>
+                        </div>
+                    </div>
+                    <div class="feature-actions">
+                        <a href="/data" class="btn btn-primary">Manage Data</a>
+                        <button class="btn btn-outline" onclick="showTestDataSection('data')">View Sample</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="feature-item" data-feature="compliance">
+                <div class="feature-content">
+                    <div class="feature-header">
+                        <div class="feature-icon">📜</div>
+                        <div class="feature-info">
+                            <h3>Compliance</h3>
+                            <p>Check regulatory compliance and stay updated with financial regulations</p>
+                        </div>
+                    </div>
+                    <div class="feature-actions">
+                        <a href="/compliance" class="btn btn-primary">View Regulations</a>
+                        <button class="btn btn-outline" onclick="showTestDataSection('compliance')">View Sample</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="dataSection" class="section hidden">
+            <h2>Data Upload</h2>
+            <form id="dataUploadForm">
+                <div class="form-group">
+                    <label for="dataFile">Upload CSV/Excel/JSON File</label>
+                    <input type="file" id="dataFile" accept=".csv,.xlsx,.xls,.json" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Upload & Analyze</button>
+            </form>
+            <div id="dataResults" class="results"></div>
+        </div>
+        
+        <div id="transactionsSection" class="section hidden">
+            <h2>Transaction Analysis</h2>
+            <form id="transactionForm">
+                <div class="form-group">
+                    <label for="transactionFile">Upload Transaction File (CSV)</label>
+                    <input type="file" id="transactionFile" accept=".csv" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Analyze</button>
+            </form>
+            <div id="transactionResults" class="results"></div>
+        </div>
+        
+        <div id="complianceSection" class="section hidden">
+            <h2>Regulatory Compliance</h2>
+            <div id="complianceResults" class="results"></div>
+        </div>
+
+        <!-- Test Data Modal -->
+        <div id="testDataModal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>📊 Test Data & Samples</h2>
+                    <button class="modal-close" onclick="closeTestDataModal()">&times;</button>
+                </div>
+                <div class="modal-body" id="testDataContent">
+                    <!-- Content will be dynamically loaded -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/dashboard.js"></script>
+    <script src="/static/js/test-data.js"></script>
+</body>
+</html>

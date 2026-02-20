@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Project - FinSight AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">FinSight AI</div>
+        <ul class="nav-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/risk">Risk Analysis</a></li>
+            <li><a href="/predictions">Predictions</a></li>
+            <li><a href="/robo-advisor">Robo Advisor</a></li>
+            <li><a href="/tax">Tax Calculator</a></li>
+            <li><a href="/capstone" class="active">Capstone</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <header class="page-header">
+            <h1>Capstone Project Dashboard</h1>
+            <p>Comprehensive Portfolio Analysis with 3-Method VaR Comparison</p>
+        </header>
+        
+        <div class="card">
+            <h2>Dual Stock Portfolio VaR Analysis</h2>
+            <p>Compare Historical Simulation, Parametric, and Monte Carlo VaR methods</p>
+            
+            <form id="capstoneForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="stock1">Stock 1</label>
+                        <input type="text" id="stock1" value="AAPL" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="weight1">Weight (%)</label>
+                        <input type="number" id="weight1" value="60" min="0" max="100" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="stock2">Stock 2</label>
+                        <input type="text" id="stock2" value="MSFT" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="weight2">Weight (%)</label>
+                        <input type="number" id="weight2" value="40" min="0" max="100" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="portfolioValue">Portfolio Value ($)</label>
+                        <input type="number" id="portfolioValue" value="100000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="period">Analysis Period</label>
+                        <select id="period">
+                            <option value="1y">1 Year</option>
+                            <option value="2y">2 Years</option>
+                            <option value="5y">5 Years</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Generate Complete Analysis</button>
+            </form>
+            
+            <div id="capstoneResults" class="results"></div>
+        </div>
+        
+        <div class="card">
+            <h2>Key Features</h2>
+            <ul class="feature-list">
+                <li>✅ Portfolio Return Calculation</li>
+                <li>✅ Dual Stock VaR Analysis</li>
+                <li>✅ 3-Method VaR Comparison (Historical, Parametric, Monte Carlo)</li>
+                <li>✅ Expected Shortfall (CVaR)</li>
+                <li>✅ Correlation Analysis</li>
+                <li>✅ Interactive Visualization Dashboard</li>
+                <li>✅ PDF Report Generation (Backend Ready)</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/capstone.js"></script>
+</body>
+</html>

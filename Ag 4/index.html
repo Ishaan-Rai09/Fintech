@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2P Simulation Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="dashboard">
+        <header>
+            <h1>P2P <span>Network</span> Simulator</h1>
+            <div id="connection-status" class="status-badge offline">Disconnected</div>
+        </header>
+
+        <section class="control-panel glass">
+            <div class="input-group">
+                <label for="node-url">Active Node URL</label>
+                <div class="row">
+                    <input type="text" id="node-url" placeholder="http://localhost:8000" value="http://localhost:8000">
+                    <button id="btn-connect" class="btn-primary">Connect Node</button>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="peer-url">Add New Peer</label>
+                <div class="row">
+                    <input type="text" id="peer-url" placeholder="http://localhost:8001">
+                    <button id="btn-add-peer" class="btn-secondary">Add Peer</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid-container">
+            <section class="broadcast glass">
+                <h2>Broadcast Message</h2>
+                <div class="msg-input">
+                    <textarea id="msg-content" placeholder="Type a message to send to the network..."></textarea>
+                    <button id="btn-send" class="btn-glow">Broadcast to Network</button>
+                </div>
+            </section>
+
+            <section class="network-info glass">
+                <h2>Connected Peers</h2>
+                <ul id="peer-list" class="list"></ul>
+            </section>
+        </div>
+
+        <section class="history glass">
+            <h2>Network Activity <span>(Real-time Log)</span></h2>
+            <div id="log-container" class="log-feed"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

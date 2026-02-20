@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robo Advisor - FinSight AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/feature-pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar-simple">
+        <div class="nav-brand">
+            <a href="/dashboard" class="brand-link">
+                <span class="logo-icon">📊</span>
+                <span class="logo-text">FinSight AI</span>
+            </a>
+        </div>
+        <div class="nav-actions">
+            <a href="/dashboard" class="btn btn-outline">← Back to Dashboard</a>
+            <div class="user-info">
+                <span id="userName">Loading...</span>
+                <a href="#" id="logoutBtn" class="logout-link">Logout</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <header class="feature-header">
+            <div class="feature-icon">🤖</div>
+            <div class="feature-info">
+                <h1>Robo Advisor</h1>
+                <p>Get AI-powered personalized investment advice and portfolio recommendations</p>
+            </div>
+        </header>
+        
+        <div class="feature-content">
+        <div class="analysis-section">
+            <h2>Risk Profile Questionnaire</h2>
+            <div id="questionnaire"></div>
+            <button id="submitQuestions" class="btn btn-primary" style="display:none;">Get Recommendations</button>
+        </div>
+        
+        <div id="recommendationsSection" class="analysis-section hidden">
+            <h2>📈 Your Investment Recommendations</h2>
+            <div id="recommendations"></div>
+        </div>
+        </div>
+    </div>
+    
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/auth-check.js"></script>
+    <script src="/static/js/test-data.js"></script>
+    <script src="/static/js/robo-advisor.js"></script>
+</body>
+</html>

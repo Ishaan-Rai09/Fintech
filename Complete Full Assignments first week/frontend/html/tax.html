@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator - FinSight AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/feature-pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar-simple">
+        <div class="nav-brand">
+            <a href="/dashboard" class="brand-link">
+                <span class="logo-icon">📊</span>
+                <span class="logo-text">FinSight AI</span>
+            </a>
+        </div>
+        <div class="nav-actions">
+            <a href="/dashboard" class="btn btn-outline">← Back to Dashboard</a>
+            <div class="user-info">
+                <span id="userName">Loading...</span>
+                <a href="#" id="logoutBtn" class="logout-link">Logout</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <header class="feature-header">
+            <div class="feature-icon">💰</div>
+            <div class="feature-info">
+                <h1>Tax Calculator</h1>
+                <p>Calculate capital gains tax and optimize your tax strategy</p>
+            </div>
+        </header>
+        
+        <div class="feature-content">
+        <div class="analysis-section">
+            <h2>Tax Calculation</h2>
+            <form id="taxForm">
+                <div class="form-group">
+                    <label for="grossIncome">Gross Income (₹)</label>
+                    <input type="number" id="grossIncome" value="1200000" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regime">Tax Regime</label>
+                    <select id="regime">
+                        <option value="compare">Compare Both</option>
+                        <option value="new">New Regime</option>
+                        <option value="old">Old Regime</option>
+                    </select>
+                </div>
+                
+                <div id="deductionsSection" class="hidden">
+                    <h3>Deductions (Old Regime)</h3>
+                    <div class="form-group">
+                        <label for="deduction80C">80C (PPF, ELSS, etc.) - Max ₹1.5L</label>
+                        <input type="number" id="deduction80C" value="150000">
+                    </div>
+                    <div class="form-group">
+                        <label for="deduction80D">80D (Health Insurance) - Max ₹25K</label>
+                        <input type="number" id="deduction80D" value="25000">
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Calculate Tax</button>
+            </form>
+            
+            <div id="taxResults" class="results"></div>
+        </div>
+        </div>
+    </div>
+    
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/auth-check.js"></script>
+    <script src="/static/js/test-data.js"></script>
+    <script src="/static/js/tax.js"></script>
+</body>
+</html>

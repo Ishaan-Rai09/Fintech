@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<style>
+    .hero-section {
+        padding: 6rem 0;
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        color: white;
+        margin-top: -1.5rem;
+        /* Offset container margin */
+        margin-bottom: 4rem;
+        border-radius: 0 0 2rem 2rem;
+        /* Or full width if outside container, but inside base checks structure */
+    }
+
+    /* Quick fix for container usage in base.html: Landing needs full width hero. 
+       Ideally, base.html would allow full width blocks. 
+       For now, let's make hero simple inside container or override container styles.
+    */
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- We override the container behavior for the landing page slightly by breaking out of the container implicitly through design or just use a nice card -->
+
+<div class="row align-items-center py-5">
+    <div class="col-lg-6">
+        <h1 class="display-3 fw-bold mb-4 text-dark">Send money across the world in seconds.</h1>
+        <p class="lead text-muted mb-5">PayFlow is the fastest, most secure way to transfer funds. Experience banking
+            without boundaries today.</p>
+        <div class="d-flex gap-3">
+            <a href="/register" class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg">Get Started</a>
+            <a href="/login" class="btn btn-outline-secondary btn-lg rounded-pill px-5">Log In</a>
+        </div>
+        <div class="mt-5 d-flex gap-4 text-muted small">
+            <div><i class="fas fa-check-circle me-1 text-success"></i> No hidden fees</div>
+            <div><i class="fas fa-check-circle me-1 text-success"></i> Bank-grade security</div>
+            <div><i class="fas fa-check-circle me-1 text-success"></i> Instant transfers</div>
+        </div>
+    </div>
+    <div class="col-lg-6 mt-5 mt-lg-0 text-center">
+        <!-- Placeholder for a hero image -->
+        <img src="https://img.freepik.com/free-vector/digital-wallet-concept-illustration_114360-7452.jpg"
+            alt="Payment Illustration" class="img-fluid rounded-4 shadow-lg">
+        <br><small class="text-muted" style="font-size: 0.7em;">Image by storyset on Freepik</small>
+    </div>
+</div>
+
+<div class="row g-4 py-5 mt-5">
+    <div class="col-md-4">
+        <div class="card h-100 p-4 border-0 shadow-hover text-center">
+            <div class="mb-3 text-primary">
+                <i class="fas fa-bolt fa-3x"></i>
+            </div>
+            <h3 class="h4 fw-bold">Lightning Fast</h3>
+            <p class="text-muted">Send and receive money instantly. No more waiting days for transactions to clear.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 p-4 border-0 shadow-hover text-center">
+            <div class="mb-3 text-primary">
+                <i class="fas fa-shield-alt fa-3x"></i>
+            </div>
+            <h3 class="h4 fw-bold">Secure by Design</h3>
+            <p class="text-muted">Your data is protected with industry-standard encryption and security protocols.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 p-4 border-0 shadow-hover text-center">
+            <div class="mb-3 text-primary">
+                <i class="fas fa-chart-line fa-3x"></i>
+            </div>
+            <h3 class="h4 fw-bold">Track Expenses</h3>
+            <p class="text-muted">Keep track of all your transactions with our intuitive and detailed dashboard.</p>
+        </div>
+    </div>
+</div>
+
+<div class="text-center py-5 mt-5 bg-light rounded-4">
+    <h2 class="fw-bold mb-3">Ready to get started?</h2>
+    <p class="text-muted mb-4">Join thousands of users who trust PayFlow for their daily transactions.</p>
+    <a href="/register" class="btn btn-primary btn-lg rounded-pill px-5">Create Free Account</a>
+</div>
+{% endblock %}

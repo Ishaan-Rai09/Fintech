@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head><title>R: Portfolio Analysis, Including Numerical Methods for Optimization
+of Portfolios</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body><div class="container">
+<h1> Portfolio Analysis, Including Numerical Methods for Optimization
+of Portfolios
+<img class="toplogo" src="../../../doc/html/Rlogo.svg" alt="[R logo]">
+</h1>
+<hr>
+<div style="text-align: center;">
+<a href="../../../doc/html/packages.html"><img class="arrow" src="../../../doc/html/left.jpg" alt="[Up]"></a>
+<a href="../../../doc/html/index.html"><img class="arrow" src="../../../doc/html/up.jpg" alt="[Top]"></a>
+</div><h2>Documentation for package &lsquo;PortfolioAnalytics&rsquo; version 2.1.1</h2>
+
+<ul><li><a href="../DESCRIPTION" type="text/plain; charset=utf-8">DESCRIPTION file</a>.</li>
+<li><a href="../doc/index.html">User guides, package vignettes and other documentation.</a></li>
+<li><a href="../demo">Code demos</a>.  Use <a href="../../utils/help/demo">demo()</a> to run them.</li>
+</ul>
+
+<h2>Help Pages</h2>
+
+
+<p style="text-align: center;">
+<a href="# "> </a>
+<a href="#A">A</a>
+<a href="#B">B</a>
+<a href="#C">C</a>
+<a href="#D">D</a>
+<a href="#E">E</a>
+<a href="#F">F</a>
+<a href="#G">G</a>
+<a href="#H">H</a>
+<a href="#I">I</a>
+<a href="#L">L</a>
+<a href="#M">M</a>
+<a href="#N">N</a>
+<a href="#O">O</a>
+<a href="#P">P</a>
+<a href="#Q">Q</a>
+<a href="#R">R</a>
+<a href="#S">S</a>
+<a href="#T">T</a>
+<a href="#U">U</a>
+<a href="#V">V</a>
+<a href="#W">W</a>
+</p>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="PortfolioAnalytics-package.html">PortfolioAnalytics-package</a></td>
+<td>Numeric methods for optimization of portfolios</td></tr>
+</table>
+
+<h2><a id="A">-- A --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="ac.ranking.html">ac.ranking</a></td>
+<td>Asset Ranking</td></tr>
+<tr><td style="width: 25%;"><a href="add.constraint.html">add.constraint</a></td>
+<td>General interface for adding and/or updating optimization constraints.</td></tr>
+<tr><td style="width: 25%;"><a href="add.objective.html">add.objective</a></td>
+<td>General interface for adding optimization objectives, including risk, return, and risk budget</td></tr>
+<tr><td style="width: 25%;"><a href="add.objective.html">add.objective_v1</a></td>
+<td>General interface for adding optimization objectives, including risk, return, and risk budget</td></tr>
+<tr><td style="width: 25%;"><a href="add.objective.html">add.objective_v2</a></td>
+<td>General interface for adding optimization objectives, including risk, return, and risk budget</td></tr>
+<tr><td style="width: 25%;"><a href="add.sub.portfolio.html">add.sub.portfolio</a></td>
+<td>Add sub-portfolio</td></tr>
+<tr><td style="width: 25%;"><a href="applyFUN.html">applyFUN</a></td>
+<td>Apply a risk or return function to a set of weights</td></tr>
+</table>
+
+<h2><a id="B">-- B --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="backtest.plot.html">backtest.plot</a></td>
+<td>generate plots of the cumulative returns and drawdown for back-testing</td></tr>
+<tr><td style="width: 25%;"><a href="barplotGroupWeights.html">barplotGroupWeights</a></td>
+<td>barplot of group weights by group or category</td></tr>
+<tr><td style="width: 25%;"><a href="black.litterman.html">black.litterman</a></td>
+<td>Black Litterman Estimates</td></tr>
+<tr><td style="width: 25%;"><a href="BlackLittermanFormula.html">BlackLittermanFormula</a></td>
+<td>Computes the Black-Litterman formula for the moments of the posterior normal.</td></tr>
+<tr><td style="width: 25%;"><a href="box_constraint.html">box_constraint</a></td>
+<td>constructor for box_constraint.</td></tr>
+</table>
+
+<h2><a id="C">-- C --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="CCCgarch.MM.html">CCCgarch.MM</a></td>
+<td>compute comoments for use by lower level optimization functions when the conditional covariance matrix is a CCC GARCH model</td></tr>
+<tr><td style="width: 25%;"><a href="center.html">center</a></td>
+<td>Center</td></tr>
+<tr><td style="width: 25%;"><a href="centroid.buckets.html">centroid.buckets</a></td>
+<td>Buckets Centroid</td></tr>
+<tr><td style="width: 25%;"><a href="centroid.complete.mc.html">centroid.complete.mc</a></td>
+<td>Complete Cases Centroid</td></tr>
+<tr><td style="width: 25%;"><a href="centroid.sectors.html">centroid.sectors</a></td>
+<td>Multiple Sectors Centroid</td></tr>
+<tr><td style="width: 25%;"><a href="centroid.sign.html">centroid.sign</a></td>
+<td>Positive and Negative View Centroid</td></tr>
+<tr><td style="width: 25%;"><a href="chart.Concentration.html">chart.Concentration</a></td>
+<td>Classic risk reward scatter and concentration</td></tr>
+<tr><td style="width: 25%;"><a href="chart.EF.Weights.html">chart.EF.Weights</a></td>
+<td>Chart weights along an efficient frontier</td></tr>
+<tr><td style="width: 25%;"><a href="chart.EF.Weights.html">chart.EF.Weights.efficient.frontier</a></td>
+<td>Chart weights along an efficient frontier</td></tr>
+<tr><td style="width: 25%;"><a href="chart.EF.Weights.html">chart.EF.Weights.optimize.portfolio</a></td>
+<td>Chart weights along an efficient frontier</td></tr>
+<tr><td style="width: 25%;"><a href="chart.EfficientFrontier.html">chart.EfficientFrontier</a></td>
+<td>Chart the efficient frontier and risk-return scatter</td></tr>
+<tr><td style="width: 25%;"><a href="chart.EfficientFrontier.html">chart.EfficientFrontier.efficient.frontier</a></td>
+<td>Chart the efficient frontier and risk-return scatter</td></tr>
+<tr><td style="width: 25%;"><a href="chart.EfficientFrontier.html">chart.EfficientFrontier.optimize.portfolio</a></td>
+<td>Chart the efficient frontier and risk-return scatter</td></tr>
+<tr><td style="width: 25%;"><a href="chart.EfficientFrontier.html">chart.EfficientFrontier.optimize.portfolio.CVXR</a></td>
+<td>Chart the efficient frontier and risk-return scatter</td></tr>
+<tr><td style="width: 25%;"><a href="chart.EfficientFrontier.html">chart.EfficientFrontier.optimize.portfolio.ROI</a></td>
+<td>Chart the efficient frontier and risk-return scatter</td></tr>
+<tr><td style="width: 25%;"><a href="chart.EfficientFrontierCompare.html">chart.EfficientFrontierCompare</a></td>
+<td>Overlay the efficient frontiers of different minRisk portfolio objects on a single plot.</td></tr>
+<tr><td style="width: 25%;"><a href="chart.EfficientFrontierOverlay.html">chart.EfficientFrontierOverlay</a></td>
+<td>Plot multiple efficient frontiers</td></tr>
+<tr><td style="width: 25%;"><a href="chart.GroupWeights.html">chart.GroupWeights</a></td>
+<td>Chart weights by group or category</td></tr>
+<tr><td style="width: 25%;"><a href="chart.RiskBudget.html">chart.RiskBudget</a></td>
+<td>Generic method to chart risk contribution</td></tr>
+<tr><td style="width: 25%;"><a href="chart.RiskBudget.html">chart.RiskBudget.opt.list</a></td>
+<td>Generic method to chart risk contribution</td></tr>
+<tr><td style="width: 25%;"><a href="chart.RiskBudget.html">chart.RiskBudget.optimize.portfolio</a></td>
+<td>Generic method to chart risk contribution</td></tr>
+<tr><td style="width: 25%;"><a href="chart.RiskBudget.html">chart.RiskBudget.optimize.portfolio.rebalancing</a></td>
+<td>Generic method to chart risk contribution</td></tr>
+<tr><td style="width: 25%;"><a href="chart.RiskReward.html">chart.RiskReward</a></td>
+<td>classic risk reward scatter</td></tr>
+<tr><td style="width: 25%;"><a href="chart.RiskReward.html">chart.RiskReward.opt.list</a></td>
+<td>classic risk reward scatter</td></tr>
+<tr><td style="width: 25%;"><a href="chart.RiskReward.html">chart.RiskReward.optimize.portfolio.DEoptim</a></td>
+<td>classic risk reward scatter</td></tr>
+<tr><td style="width: 25%;"><a href="chart.RiskReward.html">chart.RiskReward.optimize.portfolio.GenSA</a></td>
+<td>classic risk reward scatter</td></tr>
+<tr><td style="width: 25%;"><a href="chart.RiskReward.html">chart.RiskReward.optimize.portfolio.pso</a></td>
+<td>classic risk reward scatter</td></tr>
+<tr><td style="width: 25%;"><a href="chart.RiskReward.html">chart.RiskReward.optimize.portfolio.random</a></td>
+<td>classic risk reward scatter</td></tr>
+<tr><td style="width: 25%;"><a href="chart.RiskReward.html">chart.RiskReward.optimize.portfolio.ROI</a></td>
+<td>classic risk reward scatter</td></tr>
+<tr><td style="width: 25%;"><a href="chart.Weights.html">chart.Weights</a></td>
+<td>boxplot of the weights of the optimal portfolios</td></tr>
+<tr><td style="width: 25%;"><a href="chart.Weights.html">chart.Weights.opt.list</a></td>
+<td>boxplot of the weights of the optimal portfolios</td></tr>
+<tr><td style="width: 25%;"><a href="chart.Weights.html">chart.Weights.optimize.portfolio.DEoptim</a></td>
+<td>boxplot of the weights of the optimal portfolios</td></tr>
+<tr><td style="width: 25%;"><a href="chart.Weights.html">chart.Weights.optimize.portfolio.GenSA</a></td>
+<td>boxplot of the weights of the optimal portfolios</td></tr>
+<tr><td style="width: 25%;"><a href="chart.Weights.html">chart.Weights.optimize.portfolio.pso</a></td>
+<td>boxplot of the weights of the optimal portfolios</td></tr>
+<tr><td style="width: 25%;"><a href="chart.Weights.html">chart.Weights.optimize.portfolio.random</a></td>
+<td>boxplot of the weights of the optimal portfolios</td></tr>
+<tr><td style="width: 25%;"><a href="chart.Weights.html">chart.Weights.optimize.portfolio.rebalancing</a></td>
+<td>boxplot of the weights of the optimal portfolios</td></tr>
+<tr><td style="width: 25%;"><a href="chart.Weights.html">chart.Weights.optimize.portfolio.ROI</a></td>
+<td>boxplot of the weights of the optimal portfolios</td></tr>
+<tr><td style="width: 25%;"><a href="check_constraints.html">check_constraints</a></td>
+<td>check if a set of weights satisfies the constraints</td></tr>
+<tr><td style="width: 25%;"><a href="cokurtosisMF.html">cokurtosisMF</a></td>
+<td>Cokurtosis Matrix Estimate</td></tr>
+<tr><td style="width: 25%;"><a href="cokurtosisSF.html">cokurtosisSF</a></td>
+<td>Cokurtosis Matrix Estimate</td></tr>
+<tr><td style="width: 25%;"><a href="combine.optimizations.html">combine.optimizations</a></td>
+<td>Combine objects created by optimize.portfolio</td></tr>
+<tr><td style="width: 25%;"><a href="combine.portfolios.html">combine.portfolios</a></td>
+<td>Combine a list of portfolio objects</td></tr>
+<tr><td style="width: 25%;"><a href="constrained_objective.html">constrained_objective</a></td>
+<td>calculate a numeric return value for a portfolio based on a set of constraints and objectives</td></tr>
+<tr><td style="width: 25%;"><a href="constrained_objective.html">constrained_objective_v1</a></td>
+<td>calculate a numeric return value for a portfolio based on a set of constraints and objectives</td></tr>
+<tr><td style="width: 25%;"><a href="constrained_objective.html">constrained_objective_v2</a></td>
+<td>calculate a numeric return value for a portfolio based on a set of constraints and objectives</td></tr>
+<tr><td style="width: 25%;"><a href="constraint.html">constraint</a></td>
+<td>constructors for class constraint</td></tr>
+<tr><td style="width: 25%;"><a href="constraint_ROI.html">constraint_ROI</a></td>
+<td>constructor for class constraint_ROI</td></tr>
+<tr><td style="width: 25%;"><a href="constraint.html">constraint_v1</a></td>
+<td>constructors for class constraint</td></tr>
+<tr><td style="width: 25%;"><a href="constraint.html">constraint_v2</a></td>
+<td>constructors for class constraint</td></tr>
+<tr><td style="width: 25%;"><a href="coskewnessMF.html">coskewnessMF</a></td>
+<td>Coskewness Matrix Estimate</td></tr>
+<tr><td style="width: 25%;"><a href="coskewnessSF.html">coskewnessSF</a></td>
+<td>Coskewness Matrix Estimate</td></tr>
+<tr><td style="width: 25%;"><a href="covarianceMF.html">covarianceMF</a></td>
+<td>Covariance Matrix Estimate</td></tr>
+<tr><td style="width: 25%;"><a href="covarianceSF.html">covarianceSF</a></td>
+<td>Covariance Matrix Estimate</td></tr>
+<tr><td style="width: 25%;"><a href="create.EfficientFrontier.html">create.EfficientFrontier</a></td>
+<td>create an efficient frontier</td></tr>
+<tr><td style="width: 25%;"><a href="custom.covRob.Mcd.html">custom.covRob.Mcd</a></td>
+<td>Compute returns mean vector and covariance matrix with custom.covRob.Mcd</td></tr>
+<tr><td style="width: 25%;"><a href="custom.covRob.MM.html">custom.covRob.MM</a></td>
+<td>Compute returns mean vector and covariance matrix with custom.covRob.MM</td></tr>
+<tr><td style="width: 25%;"><a href="custom.covRob.Rocke.html">custom.covRob.Rocke</a></td>
+<td>Compute returns mean vector and covariance matrix with custom.covRob.Rocke</td></tr>
+<tr><td style="width: 25%;"><a href="custom.covRob.TSGS.html">custom.covRob.TSGS</a></td>
+<td>Compute returns mean vector and covariance matrix with custom.covRob.TSGS</td></tr>
+</table>
+
+<h2><a id="D">-- D --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="diversification.html">diversification</a></td>
+<td>Function to compute diversification as a constraint</td></tr>
+<tr><td style="width: 25%;"><a href="diversification_constraint.html">diversification_constraint</a></td>
+<td>constructor for diversification_constraint</td></tr>
+</table>
+
+<h2><a id="E">-- E --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="EntropyProg.html">EntropyProg</a></td>
+<td>Entropy pooling program for blending views on scenarios with a prior scenario-probability distribution</td></tr>
+<tr><td style="width: 25%;"><a href="equal.weight.html">equal.weight</a></td>
+<td>Create an equal weight portfolio</td></tr>
+<tr><td style="width: 25%;"><a href="etl_milp_opt.html">etl_milp_opt</a></td>
+<td>Minimum ETL MILP Optimization</td></tr>
+<tr><td style="width: 25%;"><a href="etl_opt.html">etl_opt</a></td>
+<td>Minimum ETL LP Optimization</td></tr>
+<tr><td style="width: 25%;"><a href="extractCokurtosis.html">extractCokurtosis</a></td>
+<td>Cokurtosis Estimate</td></tr>
+<tr><td style="width: 25%;"><a href="extractCoskewness.html">extractCoskewness</a></td>
+<td>Coskewness Estimate</td></tr>
+<tr><td style="width: 25%;"><a href="extractCovariance.html">extractCovariance</a></td>
+<td>Covariance Estimate</td></tr>
+<tr><td style="width: 25%;"><a href="extractEfficientFrontier.html">extractEfficientFrontier</a></td>
+<td>Extract the efficient frontier data points</td></tr>
+<tr><td style="width: 25%;"><a href="extractGroups.html">extractGroups</a></td>
+<td>Extract the group and/or category weights</td></tr>
+<tr><td style="width: 25%;"><a href="extractObjectiveMeasures.html">extractObjectiveMeasures</a></td>
+<td>Extract the objective measures</td></tr>
+<tr><td style="width: 25%;"><a href="extractStats.html">extractStats</a></td>
+<td>extract some stats and weights from a portfolio run via 'optimize.portfolio'</td></tr>
+<tr><td style="width: 25%;"><a href="extractStats.html">extractStats.optimize.portfolio.DEoptim</a></td>
+<td>extract some stats and weights from a portfolio run via 'optimize.portfolio'</td></tr>
+<tr><td style="width: 25%;"><a href="extractStats.html">extractStats.optimize.portfolio.GenSA</a></td>
+<td>extract some stats and weights from a portfolio run via 'optimize.portfolio'</td></tr>
+<tr><td style="width: 25%;"><a href="extractStats.html">extractStats.optimize.portfolio.parallel</a></td>
+<td>extract some stats and weights from a portfolio run via 'optimize.portfolio'</td></tr>
+<tr><td style="width: 25%;"><a href="extractStats.html">extractStats.optimize.portfolio.pso</a></td>
+<td>extract some stats and weights from a portfolio run via 'optimize.portfolio'</td></tr>
+<tr><td style="width: 25%;"><a href="extractStats.html">extractStats.optimize.portfolio.random</a></td>
+<td>extract some stats and weights from a portfolio run via 'optimize.portfolio'</td></tr>
+<tr><td style="width: 25%;"><a href="extractStats.html">extractStats.optimize.portfolio.ROI</a></td>
+<td>extract some stats and weights from a portfolio run via 'optimize.portfolio'</td></tr>
+<tr><td style="width: 25%;"><a href="extractWeights.html">extractWeights</a></td>
+<td>Extract weights from a portfolio run via 'optimize.portfolio' or 'optimize.portfolio.rebalancing'</td></tr>
+<tr><td style="width: 25%;"><a href="extract_risk.html">extract_risk</a></td>
+<td>extract the risk value when knowing the weights</td></tr>
+</table>
+
+<h2><a id="F">-- F --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="factor_exposure_constraint.html">factor_exposure_constraint</a></td>
+<td>Constructor for factor exposure constraint</td></tr>
+<tr><td style="width: 25%;"><a href="fn_map.html">fn_map</a></td>
+<td>mapping function to transform or penalize weights that violate constraints</td></tr>
+</table>
+
+<h2><a id="G">-- G --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="generatesequence.html">generatesequence</a></td>
+<td>create a sequence of possible weights for random or brute force portfolios</td></tr>
+<tr><td style="width: 25%;"><a href="get_constraints.html">get_constraints</a></td>
+<td>Helper function to get the enabled constraints out of the portfolio object When the v1_constraint object is instantiated via constraint, the arguments min_sum, max_sum, min, and max are either specified by the user or default values are assigned. These are required by other functions such as 'optimize.portfolio' and 'constrained_objective' . This function will check that these variables are in the portfolio object in the constraints list. We will default to 'min_sum=1' and 'max_sum=1' if leverage constraints are not specified. We will default to 'min=-Inf' and 'max=Inf' if box constraints are not specified.  This function is used at the beginning of optimize.portfolio and other functions to extract the constraints from the portfolio object. We Use the same naming as the v1_constraint object.</td></tr>
+<tr><td style="width: 25%;"><a href="gmv_opt.html">gmv_opt</a></td>
+<td>GMV/QU QP Optimization</td></tr>
+<tr><td style="width: 25%;"><a href="gmv_opt_leverage.html">gmv_opt_leverage</a></td>
+<td>GMV/QU QP Optimization with Turnover Constraint</td></tr>
+<tr><td style="width: 25%;"><a href="gmv_opt_ptc.html">gmv_opt_ptc</a></td>
+<td>GMV/QU QP Optimization with Proportional Transaction Cost Constraint</td></tr>
+<tr><td style="width: 25%;"><a href="gmv_opt_toc.html">gmv_opt_toc</a></td>
+<td>GMV/QU QP Optimization with Turnover Constraint</td></tr>
+<tr><td style="width: 25%;"><a href="group_constraint.html">group_constraint</a></td>
+<td>constructor for group_constraint</td></tr>
+<tr><td style="width: 25%;"><a href="group_fail.html">group_fail</a></td>
+<td>Test if group constraints have been violated</td></tr>
+</table>
+
+<h2><a id="H">-- H --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="HHI.html">HHI</a></td>
+<td>Concentration of weights</td></tr>
+</table>
+
+<h2><a id="I">-- I --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="indexes.html">indexes</a></td>
+<td>Six Major Economic Indexes</td></tr>
+<tr><td style="width: 25%;"><a href="insert_constraints.html">insert_constraints</a></td>
+<td>Insert a list of constraints into the constraints slot of a portfolio object</td></tr>
+<tr><td style="width: 25%;"><a href="insert_objectives.html">insert_objectives</a></td>
+<td>Insert a list of objectives into the objectives slot of a portfolio object</td></tr>
+<tr><td style="width: 25%;"><a href="inverse.volatility.weight.html">inverse.volatility.weight</a></td>
+<td>Create an inverse volatility weighted portfolio</td></tr>
+<tr><td style="width: 25%;"><a href="is.constraint.html">is.constraint</a></td>
+<td>check function for constraints</td></tr>
+<tr><td style="width: 25%;"><a href="is.objective.html">is.objective</a></td>
+<td>check class of an objective object</td></tr>
+<tr><td style="width: 25%;"><a href="is.portfolio.html">is.portfolio</a></td>
+<td>check function for portfolio</td></tr>
+</table>
+
+<h2><a id="L">-- L --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="leverage_exposure_constraint.html">leverage_exposure_constraint</a></td>
+<td>constructor for leverage_exposure_constraint</td></tr>
+</table>
+
+<h2><a id="M">-- M --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="maxret_milp_opt.html">maxret_milp_opt</a></td>
+<td>Maximum Return MILP Optimization</td></tr>
+<tr><td style="width: 25%;"><a href="maxret_opt.html">maxret_opt</a></td>
+<td>Maximum Return LP Optimization</td></tr>
+<tr><td style="width: 25%;"><a href="meancsm.efficient.frontier.html">meancsm.efficient.frontier</a></td>
+<td>Generate the efficient frontier for a mean-CSM portfolio</td></tr>
+<tr><td style="width: 25%;"><a href="meanetl.efficient.frontier.html">meanetl.efficient.frontier</a></td>
+<td>Generate the efficient frontier for a mean-etl portfolio</td></tr>
+<tr><td style="width: 25%;"><a href="meanrisk.efficient.frontier.html">meanrisk.efficient.frontier</a></td>
+<td>Generate multiple efficient frontiers for the same portfolio</td></tr>
+<tr><td style="width: 25%;"><a href="meanvar.efficient.frontier.html">meanvar.efficient.frontier</a></td>
+<td>Generate the efficient frontier for a mean-variance portfolio</td></tr>
+<tr><td style="width: 25%;"><a href="meucci.moments.html">meucci.moments</a></td>
+<td>Compute moments</td></tr>
+<tr><td style="width: 25%;"><a href="meucci.ranking.html">meucci.ranking</a></td>
+<td>Asset Ranking</td></tr>
+<tr><td style="width: 25%;"><a href="minmax_objective.html">minmax_objective</a></td>
+<td>constructor for class tmp_minmax_objective</td></tr>
+<tr><td style="width: 25%;"><a href="mult.portfolio.spec.html">mult.portfolio.spec</a></td>
+<td>Multple Layer Portfolio Specification</td></tr>
+<tr><td style="width: 25%;"><a href="MycovRobMcd.html">MycovRobMcd</a></td>
+<td>Control settings for custom.covRob.Mcd</td></tr>
+<tr><td style="width: 25%;"><a href="MycovRobTSGS.html">MycovRobTSGS</a></td>
+<td>Control settings for custom.covRob.TSGS</td></tr>
+</table>
+
+<h2><a id="N">-- N --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="name.replace.html">name.replace</a></td>
+<td>utility function to replace awkward named from unlist</td></tr>
+</table>
+
+<h2><a id="O">-- O --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="objective.html">objective</a></td>
+<td>constructor for class 'objective'</td></tr>
+<tr><td style="width: 25%;"><a href="opt.outputMvo.html">opt.outputMvo</a></td>
+<td>Optimal Portfolio Weights and Performance Values</td></tr>
+<tr><td style="width: 25%;"><a href="optimize.portfolio.html">optimize.portfolio</a></td>
+<td>Constrained optimization of portfolios</td></tr>
+<tr><td style="width: 25%;"><a href="optimize.portfolio.parallel.html">optimize.portfolio.parallel</a></td>
+<td>Execute multiple optimize.portfolio calls, presumably in parallel</td></tr>
+<tr><td style="width: 25%;"><a href="optimize.portfolio.rebalancing.html">optimize.portfolio.rebalancing</a></td>
+<td>Portfolio Optimization with Rebalancing Periods</td></tr>
+<tr><td style="width: 25%;"><a href="optimize.portfolio.rebalancing.html">optimize.portfolio.rebalancing_v1</a></td>
+<td>Portfolio Optimization with Rebalancing Periods</td></tr>
+<tr><td style="width: 25%;"><a href="optimize.portfolio.html">optimize.portfolio_v1</a></td>
+<td>Constrained optimization of portfolios</td></tr>
+<tr><td style="width: 25%;"><a href="optimize.portfolio.html">optimize.portfolio_v2</a></td>
+<td>Constrained optimization of portfolios</td></tr>
+</table>
+
+<h2><a id="P">-- P --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="pHist.html">pHist</a></td>
+<td>Generates histogram</td></tr>
+<tr><td style="width: 25%;"><a href="plot.html">plot.optimize.portfolio</a></td>
+<td>plot method for objects of class 'optimize.portfolio'</td></tr>
+<tr><td style="width: 25%;"><a href="plot.html">plot.optimize.portfolio.DEoptim</a></td>
+<td>plot method for objects of class 'optimize.portfolio'</td></tr>
+<tr><td style="width: 25%;"><a href="plot.html">plot.optimize.portfolio.GenSA</a></td>
+<td>plot method for objects of class 'optimize.portfolio'</td></tr>
+<tr><td style="width: 25%;"><a href="plot.html">plot.optimize.portfolio.pso</a></td>
+<td>plot method for objects of class 'optimize.portfolio'</td></tr>
+<tr><td style="width: 25%;"><a href="plot.html">plot.optimize.portfolio.random</a></td>
+<td>plot method for objects of class 'optimize.portfolio'</td></tr>
+<tr><td style="width: 25%;"><a href="plot.html">plot.optimize.portfolio.ROI</a></td>
+<td>plot method for objects of class 'optimize.portfolio'</td></tr>
+<tr><td style="width: 25%;"><a href="plotFrontiers.html">plotFrontiers</a></td>
+<td>Generate efficient frontiers plot by providing frontiers.</td></tr>
+<tr><td style="width: 25%;"><a href="portfolio.spec.html">portfolio</a></td>
+<td>constructor for class portfolio</td></tr>
+<tr><td style="width: 25%;"><a href="portfolio.moments.bl.html">portfolio.moments.bl</a></td>
+<td>Portfolio Moments</td></tr>
+<tr><td style="width: 25%;"><a href="portfolio.moments.boudt.html">portfolio.moments.boudt</a></td>
+<td>Portfolio Moments</td></tr>
+<tr><td style="width: 25%;"><a href="portfolio.spec.html">portfolio.spec</a></td>
+<td>constructor for class portfolio</td></tr>
+<tr><td style="width: 25%;"><a href="PortfolioAnalytics-package.html">PortfolioAnalytics</a></td>
+<td>Numeric methods for optimization of portfolios</td></tr>
+<tr><td style="width: 25%;"><a href="portfolio_risk_objective.html">portfolio_risk_objective</a></td>
+<td>constructor for class portfolio_risk_objective</td></tr>
+<tr><td style="width: 25%;"><a href="position_limit_constraint.html">position_limit_constraint</a></td>
+<td>constructor for filter_constraint</td></tr>
+<tr><td style="width: 25%;"><a href="pos_limit_fail.html">pos_limit_fail</a></td>
+<td>function to check for violation of position limits constraints</td></tr>
+<tr><td style="width: 25%;"><a href="print.constraint.html">print.constraint</a></td>
+<td>print method for constraint objects</td></tr>
+<tr><td style="width: 25%;"><a href="print.efficient.frontier.html">print.efficient.frontier</a></td>
+<td>Print an efficient frontier object</td></tr>
+<tr><td style="width: 25%;"><a href="print.optimize.portfolio.html">print.optimize.portfolio.CVXR</a></td>
+<td>Printing output of optimize.portfolio</td></tr>
+<tr><td style="width: 25%;"><a href="print.optimize.portfolio.html">print.optimize.portfolio.DEoptim</a></td>
+<td>Printing output of optimize.portfolio</td></tr>
+<tr><td style="width: 25%;"><a href="print.optimize.portfolio.html">print.optimize.portfolio.GenSA</a></td>
+<td>Printing output of optimize.portfolio</td></tr>
+<tr><td style="width: 25%;"><a href="print.optimize.portfolio.html">print.optimize.portfolio.pso</a></td>
+<td>Printing output of optimize.portfolio</td></tr>
+<tr><td style="width: 25%;"><a href="print.optimize.portfolio.html">print.optimize.portfolio.random</a></td>
+<td>Printing output of optimize.portfolio</td></tr>
+<tr><td style="width: 25%;"><a href="print.optimize.portfolio.rebalancing.html">print.optimize.portfolio.rebalancing</a></td>
+<td>Printing output of optimize.portfolio.rebalancing</td></tr>
+<tr><td style="width: 25%;"><a href="print.optimize.portfolio.html">print.optimize.portfolio.ROI</a></td>
+<td>Printing output of optimize.portfolio</td></tr>
+<tr><td style="width: 25%;"><a href="print.portfolio.html">print.portfolio</a></td>
+<td>Printing Portfolio Specification Objects</td></tr>
+<tr><td style="width: 25%;"><a href="print.summary.optimize.portfolio.html">print.summary.optimize.portfolio</a></td>
+<td>Printing summary output of optimize.portfolio</td></tr>
+<tr><td style="width: 25%;"><a href="print.summary.optimize.portfolio.rebalancing.html">print.summary.optimize.portfolio.rebalancing</a></td>
+<td>Printing summary output of optimize.portfolio.rebalancing</td></tr>
+</table>
+
+<h2><a id="Q">-- Q --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="quadratic_utility_objective.html">quadratic_utility_objective</a></td>
+<td>constructor for quadratic utility objective</td></tr>
+</table>
+
+<h2><a id="R">-- R --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="randomize_portfolio.html">randomize_portfolio</a></td>
+<td>version 2 generate random permutations of a portfolio seed meeting your constraints on the weights of each asset</td></tr>
+<tr><td style="width: 25%;"><a href="randomize_portfolio_v1.html">randomize_portfolio_v1</a></td>
+<td>Random portfolio sample method</td></tr>
+<tr><td style="width: 25%;"><a href="randomize_portfolio.html">randomize_portfolio_v2</a></td>
+<td>version 2 generate random permutations of a portfolio seed meeting your constraints on the weights of each asset</td></tr>
+<tr><td style="width: 25%;"><a href="random_portfolios.html">random_portfolios</a></td>
+<td>version 2 generate an arbitary number of constrained random portfolios</td></tr>
+<tr><td style="width: 25%;"><a href="random_portfolios_v1.html">random_portfolios_v1</a></td>
+<td>generate an arbitary number of constrained random portfolios</td></tr>
+<tr><td style="width: 25%;"><a href="random_portfolios.html">random_portfolios_v2</a></td>
+<td>version 2 generate an arbitary number of constrained random portfolios</td></tr>
+<tr><td style="width: 25%;"><a href="random_walk_portfolios.html">random_walk_portfolios</a></td>
+<td>deprecated random portfolios wrapper until we write a random trades function</td></tr>
+<tr><td style="width: 25%;"><a href="regime.portfolios.html">regime.portfolios</a></td>
+<td>Regime Portfolios</td></tr>
+<tr><td style="width: 25%;"><a href="return_constraint.html">return_constraint</a></td>
+<td>constructor for return_constraint</td></tr>
+<tr><td style="width: 25%;"><a href="return_objective.html">return_objective</a></td>
+<td>constructor for class return_objective</td></tr>
+<tr><td style="width: 25%;"><a href="risk_budget_objective.html">risk_budget_objective</a></td>
+<td>constructor for class risk_budget_objective</td></tr>
+<tr><td style="width: 25%;"><a href="rp_grid.html">rp_grid</a></td>
+<td>Generate random portfolios based on grid search method</td></tr>
+<tr><td style="width: 25%;"><a href="rp_sample.html">rp_sample</a></td>
+<td>Generate random portfolios using the sample method</td></tr>
+<tr><td style="width: 25%;"><a href="rp_simplex.html">rp_simplex</a></td>
+<td>Generate random portfolios using the simplex method</td></tr>
+<tr><td style="width: 25%;"><a href="rp_transform.html">rp_transform</a></td>
+<td>Transform a weights vector to satisfy constraints</td></tr>
+</table>
+
+<h2><a id="S">-- S --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="scatterFUN.html">scatterFUN</a></td>
+<td>Apply a risk or return function to asset returns</td></tr>
+<tr><td style="width: 25%;"><a href="set.portfolio.moments.html">set.portfolio.moments</a></td>
+<td>Portfolio Moments</td></tr>
+<tr><td style="width: 25%;"><a href="set.portfolio.moments_v1.html">set.portfolio.moments_v1</a></td>
+<td>set portfolio moments for use by lower level optimization functions</td></tr>
+<tr><td style="width: 25%;"><a href="set.portfolio.moments.html">set.portfolio.moments_v2</a></td>
+<td>Portfolio Moments</td></tr>
+<tr><td style="width: 25%;"><a href="statistical.factor.model.html">statistical.factor.model</a></td>
+<td>Statistical Factor Model</td></tr>
+<tr><td style="width: 25%;"><a href="summary.efficient.frontier.html">summary.efficient.frontier</a></td>
+<td>Summarize an efficient frontier object</td></tr>
+<tr><td style="width: 25%;"><a href="summary.optimize.portfolio.html">summary.optimize.portfolio</a></td>
+<td>Summarizing output of optimize.portfolio</td></tr>
+<tr><td style="width: 25%;"><a href="summary.optimize.portfolio.rebalancing.html">summary.optimize.portfolio.rebalancing</a></td>
+<td>summary method for optimize.portfolio.rebalancing</td></tr>
+<tr><td style="width: 25%;"><a href="summary.portfolio.html">summary.portfolio</a></td>
+<td>Summarize Portfolio Specification Objects</td></tr>
+</table>
+
+<h2><a id="T">-- T --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="trailingFUN.html">trailingFUN</a></td>
+<td>apply a function over a configurable trailing period</td></tr>
+<tr><td style="width: 25%;"><a href="transaction_cost_constraint.html">transaction_cost_constraint</a></td>
+<td>constructor for transaction_cost_constraint</td></tr>
+<tr><td style="width: 25%;"><a href="turnover.html">turnover</a></td>
+<td>Calculates turnover given two vectors of weights. This is used as an objective function and is called when the user adds an objective of type turnover with 'add.objective'</td></tr>
+<tr><td style="width: 25%;"><a href="turnover_constraint.html">turnover_constraint</a></td>
+<td>constructor for turnover_constraint</td></tr>
+<tr><td style="width: 25%;"><a href="turnover_objective.html">turnover_objective</a></td>
+<td>constructor for class turnover_objective</td></tr>
+</table>
+
+<h2><a id="U">-- U --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="update.constraint.html">update.constraint</a></td>
+<td>function for updating constrints, not well tested, may be broken</td></tr>
+<tr><td style="width: 25%;"><a href="update_constraint_v1tov2.html">update_constraint_v1tov2</a></td>
+<td>Helper function to update v1_constraint objects to v2 specification in the portfolio object</td></tr>
+</table>
+
+<h2><a id="V">-- V --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="var.portfolio.html">var.portfolio</a></td>
+<td>Calculate portfolio variance</td></tr>
+</table>
+
+<h2><a id="W">-- W --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="weight_concentration_objective.html">weight_concentration_objective</a></td>
+<td>Constructor for weight concentration objective</td></tr>
+<tr><td style="width: 25%;"><a href="weight_sum_constraint.html">weight_sum_constraint</a></td>
+<td>constructor for weight_sum_constraint</td></tr>
+</table>
+</div></body></html>

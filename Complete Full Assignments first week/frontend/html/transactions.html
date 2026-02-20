@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Analysis - FinSight AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/feature-pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar-simple">
+        <div class="nav-brand">
+            <a href="/dashboard" class="brand-link">
+                <span class="logo-icon">📊</span>
+                <span class="logo-text">FinSight AI</span>
+            </a>
+        </div>
+        <div class="nav-actions">
+            <a href="/dashboard" class="btn btn-outline">← Back to Dashboard</a>
+            <div class="user-info">
+                <span id="userName">Loading...</span>
+                <a href="#" id="logoutBtn" class="logout-link">Logout</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <header class="feature-header">
+            <div class="feature-icon">📈</div>
+            <div class="feature-info">
+                <h1>Transactions</h1>
+                <p>Analyze spending patterns and detect fraudulent transactions with ML</p>
+            </div>
+        </header>
+        
+        <div class="feature-content">
+            <div class="upload-section">
+                <h2>📁 Upload Transaction Data</h2>
+                <form id="transactionUploadForm" class="upload-form">
+                    <div class="form-group">
+                        <label for="transactionFile">Select Transaction CSV File</label>
+                        <input type="file" id="transactionFile" accept=".csv" required>
+                        <small>Upload CSV with columns: date, amount, category, merchant, description</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary">📊 Analyze Transactions</button>
+                </form>
+            </div>
+            
+            <div class="sample-section">
+                <h2>📋 Sample Data</h2>
+                <div class="sample-content">
+                    <p>Need test data? Download our sample transaction file:</p>
+                    <button class="btn btn-outline" onclick="downloadSample('transactions')">📥 Download Sample CSV</button>
+                    <button class="btn btn-outline" onclick="showTestDataSection('transactions')">👁️ View Sample Data</button>
+                </div>
+            </div>
+            
+            <div class="results-section">
+                <h2>📊 Transaction Analysis</h2>
+                <div id="transactionResults" class="results">
+                    <div class="empty-state">
+                        <div class="empty-icon">📈</div>
+                        <h3>No Transaction Data</h3>
+                        <p>Upload your transaction CSV to see spending patterns, fraud detection, and category analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/auth-check.js"></script>
+    <script src="/static/js/test-data.js"></script>
+    <script src="/static/js/transactions.js"></script>
+</body>
+</html>

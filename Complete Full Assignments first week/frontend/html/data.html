@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Management - FinSight AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/feature-pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar-simple">
+        <div class="nav-brand">
+            <a href="/dashboard" class="brand-link">
+                <span class="logo-icon">📊</span>
+                <span class="logo-text">FinSight AI</span>
+            </a>
+        </div>
+        <div class="nav-actions">
+            <a href="/dashboard" class="btn btn-outline">← Back to Dashboard</a>
+            <div class="user-info">
+                <span id="userName">Loading...</span>
+                <a href="#" id="logoutBtn" class="logout-link">Logout</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <header class="feature-header">
+            <div class="feature-icon">📊</div>
+            <div class="feature-info">
+                <h1>Data Management</h1>
+                <p>Upload and analyze financial data with AI-powered insights</p>
+            </div>
+        </header>
+        
+        <div class="feature-content">
+            <div class="upload-section">
+                <h2>📁 Upload Financial Data</h2>
+                <form id="dataUploadForm" class="upload-form">
+                    <div class="form-group">
+                        <label for="dataFile">Select Data File (CSV or Excel)</label>
+                        <input type="file" id="dataFile" accept=".csv,.xlsx,.xls" required>
+                        <small>Upload your financial data file for analysis and insights</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary">📈 Analyze Data</button>
+                </form>
+            </div>
+            
+            <div class="sample-section">
+                <h2>📋 Sample Data</h2>
+                <div class="sample-content">
+                    <p>Need test data? Download our sample data file:</p>
+                    <button class="btn btn-outline" onclick="downloadSample('data')">📥 Download Sample File</button>
+                    <button class="btn btn-outline" onclick="showTestDataSection('data')">👁️ View Sample Data</button>
+                </div>
+            </div>
+            
+            <div class="results-section">
+                <h2>📊 Data Analysis Results</h2>
+                <div id="dataResults" class="results">
+                    <div class="empty-state">
+                        <div class="empty-icon">📈</div>
+                        <h3>No Data Yet</h3>
+                        <p>Upload your financial data file to see analysis, insights, and AI-powered recommendations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/auth-check.js"></script>
+    <script src="/static/js/test-data.js"></script>
+    <script src="/static/js/data.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictions - FinSight AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/feature-pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar-simple">
+        <div class="nav-brand">
+            <a href="/dashboard" class="brand-link">
+                <span class="logo-icon">📊</span>
+                <span class="logo-text">FinSight AI</span>
+            </a>
+        </div>
+        <div class="nav-actions">
+            <a href="/dashboard" class="btn btn-outline">← Back to Dashboard</a>
+            <div class="user-info">
+                <span id="userName">Loading...</span>
+                <a href="#" id="logoutBtn" class="logout-link">Logout</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <header class="feature-header">
+            <div class="feature-icon">🔮</div>
+            <div class="feature-info">
+                <h1>ML Predictions</h1>
+                <p>Time series forecasting with ARIMA, LSTM, and sentiment analysis</p>
+            </div>
+        </header>
+        
+        <div class="feature-content">
+        <div class="analysis-section">
+            <h2>Upload Time Series Data</h2>
+            <form id="forecastForm">
+                <div class="form-group">
+                    <label for="dataFile">CSV File (with date and value columns)</label>
+                    <input type="file" id="dataFile" accept=".csv" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dateColumn">Date Column Name</label>
+                        <input type="text" id="dateColumn" value="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="valueColumn">Value Column Name</label>
+                        <input type="text" id="valueColumn" value="value" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="method">Forecasting Method</label>
+                        <select id="method">
+                            <option value="auto">Auto (Best Method)</option>
+                            <option value="linear">Linear Regression</option>
+                            <option value="arima">ARIMA</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="periods">Forecast Periods</label>
+                        <input type="number" id="periods" value="30" min="1" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Generate Forecast</button>
+            </form>
+            
+            <div id="forecastResults" class="results"></div>
+        </div>
+        </div>
+    </div>
+    
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/auth-check.js"></script>
+    <script src="/static/js/test-data.js"></script>
+    <script src="/static/js/predictions.js"></script>
+</body>
+</html>
